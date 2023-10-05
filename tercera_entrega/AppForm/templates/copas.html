@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="/copasForms/" method="GET">
+        
+        <input type="number" name="num_copa" id="num_copa">
+        <input type="submit" value="Buscar">
+
+    </form>
+
+    <p>Estamos buscando el: {{num_copa}}</p>
+
+    {% if copa %}
+
+    <ul>
+        {% for copa in copa %}
+          <li>{{copas.copa}}</li>
+          <li>{{copas.num_copa}}</li>
+        {% endfor %}
+
+
+    </ul>
+
+    {% endif %}
+</body>
+</html>
