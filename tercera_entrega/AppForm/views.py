@@ -1,17 +1,24 @@
 from django.shortcuts import render
-from models import Equipo, Camisetas, Copas
+from models import Equipos, Camisetas, Copas
 from django.http import HttpResponse
 
 def equipoForms(request):
     if request.method == 'POST':
-        equipo = Equipo (request.post['equipo'], (request.post['Año']))
+        equipo = Equipos (request.post['equipo'], (request.post['Año']))
         equipo.save()
         return render(request, "index.html")
     return render(request, "templates/equipos.html")
 
 def camisetasForms(request):
+    if request.method == 'POST':
+        camisetas = Camisetas (request.post['nom_equipo'], (request.post['ano_camiseta']))
+        camisetas.save()
+        return render(request, "index.html")
+    return render(request, "templates/camisetas.html")
+
+
     
-    return render (request, "templates/camisetas.html")
+    
 
 def buscar(request):
     if request.GET["num_copa"]:

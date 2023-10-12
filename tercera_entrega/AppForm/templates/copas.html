@@ -6,6 +6,19 @@
     <title>Document</title>
 </head>
 <body>
+    <nav class="navbar navbar-light bg-light static-top">
+        <div>
+            <a class="navbar-brand" href="{% url 'index'}"></a>
+            <a class="navbar-brand" href="{% url 'equipo'}">Equipo</a>
+            <a class="navbar-brand" href="{% url 'camisetas'}">Camisetas</a>
+            <a class="navbar-brand" href="{% url 'copas'}">Copas</a>
+        </div>
+    </nav>
+
+
+
+
+
     <form action="/copasForms/" method="GET">
         
         <input type="number" name="num_copa" id="num_copa">

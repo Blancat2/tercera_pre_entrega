@@ -1,7 +1,7 @@
 from django.db import models
 
 # Create your models here.
-class Equipo(models.Model):
+class Equipos(models.Model):
 
     nombre= models.CharField(max_length=40)
     ano= models.IntegerField()

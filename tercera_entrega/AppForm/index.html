@@ -6,9 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="navbar nav">
+    <nav class="navbar navbar-light bg-light static-top">
         <div>
-            <a href="{% url 'equipo'}"></a>
+            <a class="navbar-brand" href="{% url 'index'}"></a>
+            <a class="navbar-brand" href="{% url 'equipo'}">Equipo</a>
+            <a class="navbar-brand" href="{% url 'camisetas'}">Equipo</a>
+            <a class="navbar-brand" href="{% url 'copas'}">Equipo</a>
         </div>
     </nav>
 </body>
