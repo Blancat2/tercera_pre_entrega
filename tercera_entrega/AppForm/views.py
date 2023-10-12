@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from models import Equipos, Camisetas, Copas
+from .models import Equipos, Camisetas, Copas
 from django.http import HttpResponse
 
 def equipoForms(request):
